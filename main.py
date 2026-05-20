@@ -11,9 +11,10 @@ while True:
         break
 
     results = model(frame)
-    annotated_frame = results[0].plot()
 
-    cv2.imshow("Rail Hazard AI", annotated_frame)
+    frame = results[0].plot()
+
+    cv2.imshow("AI Demo", frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
